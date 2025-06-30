@@ -1,4 +1,5 @@
 from tkinter import *
+from functions import *
 
 window = Tk()
 window.geometry("500x700")
@@ -7,11 +8,6 @@ window.title("GUI Calculator")
 icon = PhotoImage(file="calculator_image.png")
 window.iconphoto(False, icon)
 window.config(bg="#33324b")
-
-def create_button(window, text):
-    return Button(window, text=text, font=("Arial", 24), bg="#22222c", fg="white")
-def place_operator(button, y):
-    button.place(relx = 0.9, rely = y, anchor=W, width=50, height=50)
 
 plus = create_button(window, "+")
 minus = create_button(window, "-")
